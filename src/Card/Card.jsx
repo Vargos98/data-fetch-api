@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Back from './back.jpg';
 import './Card.css';
 
 const Card = () => {
+ const [click, handleClick] = useState("");
+
+
+
   return (
     <div className='box'>
         
@@ -14,7 +18,7 @@ const Card = () => {
             <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
         </div>
         <div className='underline'></div>
-        <button className='btn'>View More</button>
+        <button className='btn' onClick={handleClick}>View More</button>
     </div>
   )
 }
