@@ -1,113 +1,29 @@
-import React, { useState } from 'react'
-import Back from './back.jpg';
-import './Card.css';
+import React from 'react'
 
-const Card = () => {
-  const [click, handleClick] = useState("");
-
-
-
-  return (
-
-    <div className="outer-box">
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
+const Card = ({card}) => {
+  <>
+  {
+    card ?Card(
+      card.map((anime, index)=>{
+        return(
+          <div className='box'>
+        <img className='image' src={anime.images.jpg.large_image_url} alt="background" />
         <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
+          <h3 className='title'>{anime.title}</h3>
           <div className='underline'></div>
           <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
         </div>
         <div className='underline'></div>
         <button className='btn' onClick='/App'>View More</button>
       </div>
+        )
+      })
+    ):"Not Found"
+  }
 
 
 
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      <div className='box'>
-        <img className='image' src={Back} alt="background" />
-        <div className='desc-box'>
-          <h3 className='title'>Albert hall</h3>
-          <div className='underline'></div>
-          <p className='desc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, delectus?</p>
-        </div>
-        <div className='underline'></div>
-        <button className='btn' onClick='/App'>View More</button>
-      </div>
-      
-      
-    </div>
-
-  )
+</>
 }
 
 export default Card
